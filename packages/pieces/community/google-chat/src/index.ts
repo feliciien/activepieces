@@ -1,6 +1,7 @@
 
 import { z } from "zod";
 import { createPiece, PieceAuth, PropertyType } from "@activepieces/pieces-framework";
+import { logAuthToken } from "./lib/actions/log-auth-token";
 
     export const googleChat = createPiece({
       displayName: "Google-chat",
@@ -29,7 +30,7 @@ import { createPiece, PieceAuth, PropertyType } from "@activepieces/pieces-frame
       minimumSupportedRelease: '0.36.1',
       logoUrl: "https://cdn.activepieces.com/pieces/google-chat.png",
       authors: [],
-      actions: [],
+      actions: [logAuthToken],
       triggers: [],
     });
     
